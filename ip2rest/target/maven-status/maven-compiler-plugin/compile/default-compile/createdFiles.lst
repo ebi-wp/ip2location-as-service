@@ -1,0 +1,12 @@
+uk/ac/ebi/model/CachingRepositoryImpl.class
+uk/ac/ebi/service/IP2Service.class
+uk/ac/ebi/service/FormatterService$1.class
+uk/ac/ebi/controller/FormUploadController.class
+uk/ac/ebi/controller/MyController.class
+uk/ac/ebi/Application.class
+uk/ac/ebi/model/CachingRepository.class
+uk/ac/ebi/model/IP2Model.class
+uk/ac/ebi/service/ScheduledTask.class
+uk/ac/ebi/service/FormatterService.class
+uk/ac/ebi/Utils.class
+uk/ac/ebi/service/FormatterService$OUTPUT_FORMAT.class

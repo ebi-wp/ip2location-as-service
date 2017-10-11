@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/pig/common/ip2location/ip2rest/ip2rest.iml" filepath="$PROJECT_DIR$/pig/common/ip2location/ip2rest/ip2rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pig/common/ip2location/java/java-udf.iml" filepath="$PROJECT_DIR$/pig/common/ip2location/java/java-udf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/log-pig.iml" filepath="$PROJECT_DIR$/.idea/log-pig.iml" />
+    </modules>
+  </component>
+</project>
