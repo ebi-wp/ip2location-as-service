@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f429c9c2-30a4-45ec-aadc-b3272713468a" name="Default" comment="UI and REST, both with caching requests">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="log-pig.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -978,7 +978,7 @@
       <workItem from="1496916254776" duration="1193000" />
       <workItem from="1497010437769" duration="3337000" />
       <workItem from="1504609493182" duration="4000" />
-      <workItem from="1507715250751" duration="1705000" />
+      <workItem from="1507715250751" duration="1970000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaning-up before merging with master">
       <created>1464092804644</created>
@@ -1039,7 +1039,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253190000" />
+    <option name="totallyTimeSpent" value="253455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="707" y="23" width="1170" height="1057" extended-state="0" />
