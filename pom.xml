@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>ip2rest</name>
-    <description>IP2Location as REST with simple visualization</description>
+    <description>IP2Location as REST with simple formatting</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,6 +21,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
+        <internal.ip2.jar.version>0.0.2</internal.ip2.jar.version>
         <start-class>uk.ac.ebi.Application</start-class>
     </properties>
 
@@ -81,7 +82,7 @@
         <dependency>
             <groupId>com.ip2location</groupId>
             <artifactId>java</artifactId>
-            <version>0.0.1</version>
+            <version>${internal.ip2.jar.version}</version>
         </dependency>
 
     </dependencies>
