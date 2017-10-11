@@ -14,3 +14,9 @@ mvn install:install-file -Dfile=<jar_path> \
 -Dpackaging=jar
 ```
 
+#### Run
+
+```bin/start.sh```
+
+Go to [http://localhost:8080/wp/ip2loc/](http://localhost:8080/wp/ip2loc/)
+

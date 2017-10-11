@@ -2,9 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <!--<link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.6/css/bootstrap.min.css"-->
-    <!--th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}"-->
-    <!--rel="stylesheet" media="screen"/>-->
 </head>
 <body>
 
@@ -84,13 +81,13 @@
 
 
     <h3>REST API Examples</h3>
-    <pre>curl -X POST http://wwwint.ebi.ac.uk/wp/ip2loc/?input=193.62.194.250</pre>
-    <pre>curl -X POST http://wwwint.ebi.ac.uk/wp/ip2loc/?input=193.62.194.250,137.224.24.225,159.92.115.11</pre>
-    <pre>curl -X POST "http://wwwint.ebi.ac.uk/wp/ip2loc/?input=193.62.194.250&amp;fields=city,region&amp;outputFormat=CSV&amp;csvHeader=false&amp;csvDelimiter=|"</pre>
+    <pre>curl -X POST http://localhost:8080/wp/ip2loc/?input=193.62.194.250</pre>
+    <pre>curl -X POST http://localhost:8080/wp/ip2loc/?input=193.62.194.250,137.224.24.225,159.92.115.11</pre>
+    <pre>curl -X POST "http://localhost:8080/wp/ip2loc/?input=193.62.194.250&amp;fields=city,region&amp;outputFormat=CSV&amp;csvHeader=false&amp;csvDelimiter=|"</pre>
 
-    <pre>curl -X POST -F "file=@sample.txt" http://wwwint.ebi.ac.uk/wp/ip2loc/?outputFormat=TSV</pre>
+    <pre>curl -X POST -F "file=@sample.txt" http://localhost:8080/wp/ip2loc/?outputFormat=TSV</pre>
 
-    <pre>curl -X POST "http://wwwint.ebi.ac.uk/wp/ip2loc/?input=193.62.194.250,193.62.194.250&amp;removeduplicate=false"</pre>
+    <pre>curl -X POST "http://localhost:8080/wp/ip2loc/?input=193.62.194.250,193.62.194.250&amp;removeduplicate=false"</pre>
 
 </div>
 </body>

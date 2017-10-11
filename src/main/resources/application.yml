@@ -6,20 +6,18 @@ server.port: 8080
 server.contextPath: /wp/ip2loc/
 management.port: 9001
 management.context-path: ${server.contextPath}
-multipart:
-  location: /net/isilonP/public/rw/homes/es_adm/ip2location/tmp-dir
 
 ---
 spring:
   profiles: default
   paths:
-    db: /ebi/extserv/local_work/ip2location/IP-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE.BIN
-    license: /ebi/extserv/local_work/ip2location/license.key
+    db: IP-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE.BIN
+    license: license.key
 
 ---
 spring:
-  profiles: dev_szymon
+  profiles: dev
   paths:
-    db: /Users/chojnasm/Data/IP-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE.BIN
-    license: /Users/chojnasm/Data/license.key
+    db: your-path
+    license: your-license
 
