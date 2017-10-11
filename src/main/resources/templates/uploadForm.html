@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!--<link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.6/css/bootstrap.min.css"-->
+    <!--th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}"-->
+    <!--rel="stylesheet" media="screen"/>-->
+</head>
+<body>
+
+<div class="container">
+    <h3>Input form</h3>
+    <p>
+        Upload either a file with IP addresses or paste addresses into input field. IP addresses should be separated by
+        new line or comma or semicolon.
+    </p>
+    <form method="POST" enctype="multipart/form-data" th:action="${contextPath}">
+        <table>
+            <tr>
+                <td>Upload a file:</td>
+                <td><input type="file" name="file"/></td>
+                <td><a th:href="sampledata"> Sample file </a></td>
+            </tr>
+            <tr>
+                <td>or use input field:</td>
+                <td><input type="textarea" rows="4" cols="150" name="input"/></td>
+                <td>e.g.: 188.205.232.146,114.34.25.144,61.36.219.167,140.109.53.2,165.132.31.163,193.62.194.250</td>
+            </tr>
+            <tr><td></td><td></td></tr>
+            <tr>
+                <td>Output format:</td>
+                <td>
+                    <select id="outputFormat" name="outputFormat">
+                        <option th:each="outputFormat : ${outputFormats}" th:value="${outputFormat}"
+                                th:text="${outputFormat}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select fields in output:<br/>default: all fields</td>
+                <td>
+                    <select id="fields" name="fields" multiple="multiple" size="10">
+                        <option th:each="field : ${fields}" th:value="${field}" th:text="${field}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Remove duplicates from output:</td>
+                <td>
+                    <select id="removeduplicate" name="removeduplicate">
+                        <option value="true" selected="selected">True</option>
+                        <option value="false">False</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><br/>Optional for CSV format only:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CSV Show header:</td>
+                <td>
+                    <select id="csvHeader" name="csvHeader">
+                        <option value="true" selected="selected">True</option>
+                        <option value="false">False</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>CSV Delimiter:</td>
+                <td><input type="text" name="csvDelimiter" maxlength="1" size="1" value=","/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Download"/></td>
+            </tr>
+        </table>
+    </form>
+    <p>
+        <br/>
+    </p>
+    <hr/>
+    <br/>
+
+
+    <h3>REST API Examples</h3>
+    <pre>curl -X POST http://wwwint.ebi.ac.uk/wp/ip2loc/?input=193.62.194.250</pre>
+    <pre>curl -X POST http://wwwint.ebi.ac.uk/wp/ip2loc/?input=193.62.194.250,137.224.24.225,159.92.115.11</pre>
+    <pre>curl -X POST "http://wwwint.ebi.ac.uk/wp/ip2loc/?input=193.62.194.250&amp;fields=city,region&amp;outputFormat=CSV&amp;csvHeader=false&amp;csvDelimiter=|"</pre>
+
+    <pre>curl -X POST -F "file=@sample.txt" http://wwwint.ebi.ac.uk/wp/ip2loc/?outputFormat=TSV</pre>
+
+    <pre>curl -X POST "http://wwwint.ebi.ac.uk/wp/ip2loc/?input=193.62.194.250,193.62.194.250&amp;removeduplicate=false"</pre>
+
+</div>
+</body>
+</html>
